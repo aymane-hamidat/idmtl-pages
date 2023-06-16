@@ -1,0 +1,51 @@
+<div class="top">
+  <img src="assets/logo.png" height="55px" alt="">
+  <span class="head">
+    <img src="assets/depa.png" height="20px">
+    Départs
+  </span>
+  <div></div>
+</div>
+<table>
+  <tr>
+    <th>Prévu</th>
+    <th>Révisé</th>
+    <th style="text-align: right">Vol</th>
+    <th></th>
+    <th>Destination</th>
+    <th>Porte</th>
+    <th>Etat</th>
+  </tr>
+  <tr>
+    <td colspan="7" class="date">
+      {{firstDay.date}}
+    </td>
+  </tr>
+  <tr *ngFor="let departure of firstDay.departures">
+    <td>{{departure.planned_hour}}</td>
+    <td style="color: #e68f40">{{departure.revised_hour}}</td>
+    <td><img src="{{departure.company_logo_reduce}}"></td>
+    <td><span style="color: #0393f4;font-weight: bold">{{departure.flight}}</span></td>
+    <td>{{departure.destination}}</td>
+    <td>
+      <div style="background-color: #ee1944;padding: 3%;width: 40px">{{departure.terminal_gate}}</div>
+    </td>
+    <td>{{departure.details.status}}</td>
+  </tr>
+  <tr>
+    <td colspan="7" class="date">
+      {{secondDay.date}}
+    </td>
+  </tr>
+  <tr *ngFor="let departure of secondDay.departures">
+    <td>{{departure.planned_hour}}</td>
+    <td>{{departure.revised_hour}}</td>
+    <td><img src="{{departure.company_logo_reduce}}"></td>
+    <td><span style="color: #0393f4;font-weight: bold">{{departure.flight}}</span></td>
+    <td>{{departure.destination}}</td>
+    <td>
+      <div style="background-color: #ee1944;padding: 3%;width: 40px">{{departure.terminal_gate}}</div>
+    </td>
+    <td>{{departure.details.status}}</td>
+  </tr>
+</table>

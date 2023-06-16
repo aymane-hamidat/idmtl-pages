@@ -1,0 +1,8 @@
+{
+  "/api/*": {
+    "target": "https://www.admtl.com/fr/admtldata",
+    "secure": true,
+    "logLevel": "debug",
+    "changeOrigin": true
+  }
+}

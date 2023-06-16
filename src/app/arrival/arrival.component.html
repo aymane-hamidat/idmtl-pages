@@ -1,0 +1,44 @@
+<div class="top">
+  <img src="assets/logo.png" height="55px" alt="">
+  <span class="head">
+    <img src="assets/arriv.png" height="20px">
+    Arrivées
+  </span>
+  <div></div>
+</div>
+<table>
+  <tr>
+    <th>Prévu</th>
+    <th>Révisé</th>
+    <th style="text-align: right">Vol</th>
+    <th></th>
+    <th>Provenance</th>
+    <th>Etat</th>
+  </tr>
+  <tr>
+    <td colspan="7" class="date">
+      {{firstDay.date}}
+    </td>
+  </tr>
+  <tr *ngFor="let arrival of firstDay.arrivals">
+    <td>{{arrival.planned_hour}}</td>
+    <td style="color: #e68f40">{{arrival.revised_hour}}</td>
+    <td><img src="{{arrival.company_logo_reduce}}"></td>
+    <td><span style="color: #0393f4;font-weight: bold">{{arrival.flight}}</span></td>
+    <td>{{arrival.destination}}</td>
+    <td>{{arrival.details.status}}</td>
+  </tr>
+  <tr>
+    <td colspan="7" class="date">
+      {{secondDay.date}}
+    </td>
+  </tr>
+  <tr *ngFor="let arrival of secondDay.arrivals">
+    <td>{{arrival.planned_hour}}</td>
+    <td style="color: #e68f40">{{arrival.revised_hour}}</td>
+    <td><img src="{{arrival.company_logo_reduce}}"></td>
+    <td><span style="color: #0393f4;font-weight: bold">{{arrival.flight}}</span></td>
+    <td>{{arrival.destination}}</td>
+    <td>{{arrival.details.status}}</td>
+  </tr>
+</table>
