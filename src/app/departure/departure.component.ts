@@ -17,7 +17,7 @@ export class DepartureComponent implements OnInit {
   }
 
   ngOnInit() {
-    timer(0, 1000).pipe(
+    timer(0, 5000).pipe(
       map(() => {
         this.service.getDepartures().subscribe(
           (res: any) => {

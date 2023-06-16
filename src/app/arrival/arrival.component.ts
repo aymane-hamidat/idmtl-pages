@@ -17,7 +17,7 @@ export class ArrivalComponent {
   }
 
   ngOnInit() {
-    timer(0, 1000).pipe(
+    timer(0, 5000).pipe(
       map(() => {
         this.service.getArrivals().subscribe(
           (res: any) => {
